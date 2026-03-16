@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Aeial, sans-serif;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #19192d;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+}
+
+.logo{
+    color: #e94560;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* =================HERO================= */
+
+.hero{
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: White;
+    text-align: center;
+    padding: 80px 20px;
+
+}
+
+.hero h1{
+    font-size:clamp(28px, 5vw, 56px) ;
+    margin-bottom: 15px;
+}
+
+.hero p{
+    font-size: clamp(14px, 2vw, 20px);
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.btn{
+    background: #e94560;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* ====== CARDS======0 */
+
+.cards-section {
+    padding: 60px 30px;
+    background: #f5f5f5;
+
+}
+.cards-section h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0,08);
+}
+.card .icon { font-size: 40px; margin-bottom: 15px; }
+.card h3 { color: #333; margin-bottom: 10px; }
+.card p { color: #888; font-size: 14px; line-height: 1.6; }
+
+/* ===FOOTER==== */
+
+footer {
+    background: #1a1a2e;
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* 
+===================
+TABLET - 768 SE CHHOTA
+===================
+*/
+
+
+@media (max-width: 768px) {
+    /*  */
+    .nav-links {
+        display: none;
+    }
+}
+
+.hamburger {
+    display: block;
+}
+
+.cards{
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+ /* ==============================
+   MOBILE — 480px se chota
+============================== */
+@media (max-width: 480px) {
+      nav {
+        padding: 15px 20px;
+    }
+
+      .hero {
+        padding: 50px 15px;
+      }
+
+      /* Cards — 1 column */
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .cards-section {
+        padding: 40px 15px;
+      }
+    }
